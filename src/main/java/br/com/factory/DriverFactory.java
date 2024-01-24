@@ -27,7 +27,7 @@ public class DriverFactory  {
                 .amend("appium:deviceName", "emulator-5554")
                 .amend("appium:automationName", "UiAutomator2")
                 .amend("appium:appPackage", "com.sec.android.app.popupcalculator")
-                .amend("appium:noReset", "false")
+                .amend("appium:noReset", "true")
                 .amend("appium:autoGrantPermissions", true)
                 .amend("appium:udid", "RQ8M90M4B4X")
                 .amend("appium:appActivity", "com.sec.android.app.popupcalculator.Calculator")
@@ -35,7 +35,7 @@ public class DriverFactory  {
                 .amend("appium:nativeWebScreenshot", true)
                 .amend("appium:newCommandTimeout", 3600)
                 .amend("appium:connectHardwareKeyboard", true);
-        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), options);
+        driver = new AndroidDriver(new URL("http://localhost:4723/"), options);
     }
 
 
