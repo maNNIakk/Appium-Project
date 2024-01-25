@@ -1,6 +1,5 @@
 package br.com.factory;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.options.BaseOptions;
 import org.junit.AfterClass;
@@ -43,7 +42,7 @@ public class DriverFactory {
         driver.unlockDevice();
         //       Apenas para a versão 1.2
 //        driver.findElement(AppiumBy.id("android:id/button1")).click();
-        driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Formulário\"]")).click();
+
     }
 
 

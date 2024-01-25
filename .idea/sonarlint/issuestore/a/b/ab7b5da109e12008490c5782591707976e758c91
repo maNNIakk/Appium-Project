@@ -2,10 +2,6 @@
 W
 java:S1118":Add a private constructor to hide the implicit public one.(Ê§íá8™¹æÓ1
 c
-java:S1854"ARemove this useless assignment to local variable "appiumCommand".(ÂËì®üÿÿÿÿ8™Ë˜æÓ1
-T
-java:S1481"2Remove this unused "appiumCommand" local variable.(ÂËì®üÿÿÿÿ8šË˜æÓ1
-c
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(’üÉ„ÿÿÿÿÿ8šË˜æÓ1
-L	java:S106"+Replace this use of System.out by a logger.(ŸÃâûÿÿÿÿ8Ÿ¹æÓ1
-G	java:S106"+Replace this use of System.out by a logger.(À·½ù8 ¹æÓ1
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(’üÉ„ÿÿÿÿÿ8šË˜æÓ1
+L	java:S106"+Replace this use of System.out by a logger.(ŸÃâûÿÿÿÿ8Ÿ¹æÓ1
+G	java:S106"+Replace this use of System.out by a logger.(À·½ù8 ¹æÓ1
