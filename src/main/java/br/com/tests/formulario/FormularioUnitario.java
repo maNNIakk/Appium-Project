@@ -8,15 +8,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
-public class Formulario extends DriverFactory {
+public class FormularioUnitario extends DriverFactory {
+
+    WebElement checkBox;
+    WebElement switc;
 
     @Before
-    public void setupEach(){
+    public void setupEach() {
         driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Formulário\"]")).click();
+        checkBox = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
+        switc = driver.findElement(AppiumBy.className("android.widget.Switch"));
     }
 
     @After
-    public void tearDownEach(){
+    public void tearDownEach() {
         driver.navigate().back();
     }
 
@@ -39,9 +44,6 @@ public class Formulario extends DriverFactory {
     @Test
     public void marcarSwitchECheckbox() {
 
-        WebElement checkBox = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
-        WebElement switc = driver.findElement(AppiumBy.className("android.widget.Switch"));
-
         Assert.assertTrue(checkBox.getAttribute("checked").equals("false"));
         Assert.assertTrue(switc.getAttribute("checked").equals("true"));
 
@@ -51,4 +53,6 @@ public class Formulario extends DriverFactory {
         Assert.assertTrue(checkBox.getAttribute("checked").equals("true"));
         Assert.assertTrue(switc.getAttribute("checked").equals("false"));
     }
+
+
 }
