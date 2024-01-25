@@ -10,7 +10,6 @@ public class ServerFactory {
     private static AppiumDriverLocalService appiumService;
 
     public static void startAppiumServer() {
-        String appiumCommand = "C:\\Users\\renat\\AppData\\Roaming\\npm\\appium.cmd";
         String appiumMainJsPath = "C:\\Users\\renat\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
         AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder()
                 .withAppiumJS(new File(appiumMainJsPath))

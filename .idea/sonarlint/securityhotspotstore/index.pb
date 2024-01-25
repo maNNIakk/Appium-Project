@@ -7,3 +7,5 @@ _
 /src/main/java/br/com/factory/DriverFactory.java,c\1\c15c3fb8585be71d19b45b511146bb3896d7bedd
 `
 0src/main/java/br/com/tests/CalculadoraTeste.java,7\2\7217aaf0df6721485de46f13d3ba7028107645a2
+_
+/src/main/java/br/com/factory/ServerFactory.java,a\b\ab7b5da109e12008490c5782591707976e758c91
