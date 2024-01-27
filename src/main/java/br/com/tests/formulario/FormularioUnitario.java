@@ -1,6 +1,6 @@
 package br.com.tests.formulario;
 
-import br.com.factory.DriverFactory;
+import br.com.core.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;

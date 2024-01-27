@@ -1,4 +1,4 @@
-package br.com.factory;
+package br.com.core;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;

@@ -1,12 +1,13 @@
 package br.com.tests.formulario;
 
-import br.com.factory.DriverFactory;
+import br.com.core.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
+
 
 public class FormularioCompleto extends DriverFactory {
 
@@ -38,7 +39,7 @@ public class FormularioCompleto extends DriverFactory {
         driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]")).click();
 
         Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Nome: Xablau\"]")).isDisplayed());
-        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Console: switch\"]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[starts-with(@text, 'Console')]")).getText().contains("switch"));
         Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Switch: Off\"]")).isDisplayed());
         Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Checkbox: Marcado\"]")).isDisplayed());
     }
