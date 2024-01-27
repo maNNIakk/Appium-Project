@@ -8,7 +8,7 @@ public class DeviceConfiguration {
                 .amend("appium:deviceMetrics.width", 1080)
                 .amend("appium:deviceMetrics.height", 1920)
                 .amend("appium:deviceMetrics.pixelRatio", 3.0)
-                .amend("appium:udid", "RQ8M90M4B4X")
+                .amend("appium:udid", "emulator-5554")
                 .amend("appium:app", "src//main//resources//CTAppium_2_0.apk")
                 .amend("platformName", "Android")
                 .amend("appium:deviceName", "emulator-5554")
@@ -21,7 +21,8 @@ public class DeviceConfiguration {
                 .amend("appium:nativeWebScreenshot", true)
                 .amend("appium:newCommandTimeout", 6500)
                 .amend("appium:connectHardwareKeyboard", true)
-                .amend("appium:unlockType", "pin")
-                .amend("appium:unlockKey", "6210");
+//                .amend("appium:unlockType", "pin")
+//                .amend("appium:unlockKey", "6210")
+                ;
     }
 }
