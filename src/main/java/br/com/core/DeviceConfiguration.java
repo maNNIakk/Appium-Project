@@ -1,5 +1,6 @@
-package br.com.properties;
+package br.com.core;
 
+import br.com.properties.Devices;
 import io.appium.java_client.remote.options.BaseOptions;
 public class DeviceConfiguration {
 
@@ -8,7 +9,7 @@ public class DeviceConfiguration {
                 .amend("appium:deviceMetrics.width", 1080)
                 .amend("appium:deviceMetrics.height", 1920)
                 .amend("appium:deviceMetrics.pixelRatio", 3.0)
-                .amend("appium:udid", "emulator-5554")
+                .amend("appium:udid", Devices.DeviceUDID.PHYSICAL_DEVICE)
                 .amend("appium:app", "src//main//resources//CTAppium_2_0.apk")
                 .amend("platformName", "Android")
                 .amend("appium:deviceName", "emulator-5554")

@@ -1,6 +1,5 @@
 package br.com.core;
 
-import br.com.properties.DeviceConfiguration;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
