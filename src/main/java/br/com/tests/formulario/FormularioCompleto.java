@@ -1,25 +1,22 @@
 package br.com.tests.formulario;
 
 import br.com.core.DriverFactory;
+import br.com.page.MenuPage;
 import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebElement;
 
 
 public class FormularioCompleto extends DriverFactory {
 
-    WebElement checkBox;
-    WebElement switc;
+    MenuPage menu = new MenuPage();
 
     @Before
     public void setupEach() {
-        driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Formulário\"]")).click();
-        checkBox = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
-        switc = driver.findElement(AppiumBy.className("android.widget.Switch"));
-    }
+        menu.acessarFormulario();
+         }
 
     @After
     public void tearDownEach() {
@@ -28,19 +25,21 @@ public class FormularioCompleto extends DriverFactory {
 
     @Test
     public void realizaCadastroEVerificaValores() {
-        driver.findElement(AppiumBy.accessibilityId("nome")).sendKeys("Xablau");
-        driver.findElement(AppiumBy.id("android:id/text1")).click();
-        driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@text='Nintendo Switch']")).click();
+        cmd.escrever(AppiumBy.accessibilityId("nome"),"Xablau");
+        cmd.selecionarCombo(AppiumBy.accessibilityId("console"),"Nintendo " +
+                "Switch");
         //Começa desmarcado
-        checkBox.click();
+        cmd.clica(AppiumBy.className("android.widget.CheckBox"));
         //Começa marcado
-        switc.click();
+        cmd.clica(AppiumBy.className("android.widget.Switch"));
+        cmd.clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]"));
 
-        driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]")).click();
 
-        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Nome: Xablau\"]")).isDisplayed());
+        Assert.assertEquals("Nome: Xablau",cmd.obterTexto(AppiumBy.xpath("//android" +
+                ".widget.TextView[@text=\"Nome: Xablau\"]")));
         Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[starts-with(@text, 'Console')]")).getText().contains("switch"));
-        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Switch: Off\"]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget" +
+                ".TextView[@text=\"Switch: Off\"]")).getText().endsWith("Off"));
         Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Checkbox: Marcado\"]")).isDisplayed());
     }
 }

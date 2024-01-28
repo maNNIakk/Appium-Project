@@ -2,14 +2,13 @@ package br.com.core;
 
 import br.com.properties.Devices;
 import io.appium.java_client.remote.options.BaseOptions;
+
 public class DeviceConfiguration {
 
+
     public static BaseOptions getBaseOptions() {
-        return new BaseOptions()
-                .amend("appium:deviceMetrics.width", 1080)
-                .amend("appium:deviceMetrics.height", 1920)
-                .amend("appium:deviceMetrics.pixelRatio", 3.0)
-                .amend("appium:udid", Devices.DeviceUDID.PHYSICAL_DEVICE)
+        BaseOptions options = new BaseOptions()
+                .amend("appium:udid", Devices.EMULATOR)
                 .amend("appium:app", "src//main//resources//CTAppium_2_0.apk")
                 .amend("platformName", "Android")
                 .amend("appium:deviceName", "emulator-5554")
@@ -20,10 +19,13 @@ public class DeviceConfiguration {
                 .amend("appium:fullReset", true)
                 .amend("appium:autoGrantPermissions", true)
                 .amend("appium:nativeWebScreenshot", true)
-                .amend("appium:newCommandTimeout", 6500)
-                .amend("appium:connectHardwareKeyboard", true)
-//                .amend("appium:unlockType", "pin")
-//                .amend("appium:unlockKey", "6210")
-                ;
+                .amend("appium:newCommandTimeout", 6500);
+        if (options.getCapability("appium:udid") == Devices.PHYSICAL_DEVICE_UDID) {
+            options
+                    .amend("appium:unlockType", "pin")
+                    .amend("appium:unlockKey", "6210");
+            System.out.println("CHEGUEI AQUI PO");
+        }
+        return options;
     }
 }

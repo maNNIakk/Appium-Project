@@ -1,23 +1,20 @@
 package br.com.tests.formulario;
 
 import br.com.core.DriverFactory;
+import br.com.page.MenuPage;
 import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebElement;
 
 public class FormularioUnitario extends DriverFactory {
 
-    WebElement checkBox;
-    WebElement switc;
+    private MenuPage menu = new MenuPage();
 
     @Before
     public void setupEach() {
-        driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Formulário\"]")).click();
-        checkBox = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
-        switc = driver.findElement(AppiumBy.className("android.widget.Switch"));
+        menu.acessarFormulario();
     }
 
     @After
@@ -28,30 +25,36 @@ public class FormularioUnitario extends DriverFactory {
 
     @Test
     public void preencherCampoNomeFormulario() {
-        driver.findElement(AppiumBy.accessibilityId("nome")).sendKeys("Xablau");
-        Assert.assertEquals(driver.findElement(AppiumBy.accessibilityId("nome")).getText(), "Xablau");
+        cmd.escrever(AppiumBy.accessibilityId("nome"), "Xablau");
+        Assert.assertEquals(cmd.obterTexto(AppiumBy.accessibilityId("nome")), "Xablau");
 
     }
 
     @Test
     public void clicaValorCombo() {
-        driver.findElement(AppiumBy.id("android:id/text1")).click();
-        driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@text='Nintendo Switch']")).click();
+        cmd.selecionarCombo(AppiumBy.accessibilityId("console"), "Nintendo " +
+                "Switch");
 
-        Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/text1")).getText(), "Nintendo Switch");
+        Assert.assertEquals(cmd.obterTexto(AppiumBy.id("android:id/text1")), "Nintendo Switch");
     }
 
     @Test
     public void marcarSwitchECheckbox() {
 
-        Assert.assertTrue(checkBox.getAttribute("checked").equals("false"));
-        Assert.assertTrue(switc.getAttribute("checked").equals("true"));
+        Assert.assertFalse(cmd.isChecked(AppiumBy.className("android.widget" +
+                ".CheckBox")));
+        Assert.assertTrue(cmd.isChecked(AppiumBy.className("android.widget" +
+                ".Switch")));
 
-        checkBox.click();
-        switc.click();
+        cmd.clica(AppiumBy.className("android.widget" +
+                ".CheckBox"));
+        cmd.clica(AppiumBy.className("android.widget" +
+                ".Switch"));
 
-        Assert.assertTrue(checkBox.getAttribute("checked").equals("true"));
-        Assert.assertTrue(switc.getAttribute("checked").equals("false"));
+        Assert.assertTrue(cmd.isChecked(AppiumBy.className("android.widget" +
+                ".CheckBox")));
+        Assert.assertFalse(cmd.isChecked(AppiumBy.className("android.widget" +
+                ".Switch")));
     }
 
 
