@@ -2,7 +2,6 @@ package br.com.tests.formulario;
 
 import br.com.core.DriverFactory;
 import br.com.page.MenuPage;
-import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -25,36 +24,29 @@ public class FormularioUnitario extends DriverFactory {
 
     @Test
     public void preencherCampoNomeFormulario() {
-        cmd.escrever(AppiumBy.accessibilityId("nome"), "Xablau");
-        Assert.assertEquals(cmd.obterTexto(AppiumBy.accessibilityId("nome")), "Xablau");
+        formulario.preencheNome("Xablau");
+        Assert.assertEquals(formulario.obterNome(), "Xablau");
 
     }
 
     @Test
     public void clicaValorCombo() {
-        cmd.selecionarCombo(AppiumBy.accessibilityId("console"), "Nintendo " +
-                "Switch");
+        formulario.selecionarCombo("Nintendo Switch");
 
-        Assert.assertEquals(cmd.obterTexto(AppiumBy.id("android:id/text1")), "Nintendo Switch");
+        Assert.assertEquals(formulario.obterValorCombo(), "Nintendo Switch");
     }
 
     @Test
     public void marcarSwitchECheckbox() {
 
-        Assert.assertFalse(cmd.isChecked(AppiumBy.className("android.widget" +
-                ".CheckBox")));
-        Assert.assertTrue(cmd.isChecked(AppiumBy.className("android.widget" +
-                ".Switch")));
+        Assert.assertFalse(formulario.isCheckMarcado());
+        Assert.assertTrue(formulario.isSwitchMarcado());
 
-        cmd.clica(AppiumBy.className("android.widget" +
-                ".CheckBox"));
-        cmd.clica(AppiumBy.className("android.widget" +
-                ".Switch"));
+        formulario.clicarCheck();
+        formulario.clicarSwitch();
 
-        Assert.assertTrue(cmd.isChecked(AppiumBy.className("android.widget" +
-                ".CheckBox")));
-        Assert.assertFalse(cmd.isChecked(AppiumBy.className("android.widget" +
-                ".Switch")));
+        Assert.assertTrue(formulario.isCheckMarcado());
+        Assert.assertFalse(formulario.isSwitchMarcado());
     }
 
 

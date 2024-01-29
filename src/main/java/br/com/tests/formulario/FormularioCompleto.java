@@ -1,7 +1,6 @@
 package br.com.tests.formulario;
 
 import br.com.core.DriverFactory;
-import br.com.page.MenuPage;
 import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
@@ -11,7 +10,6 @@ import org.junit.Test;
 
 public class FormularioCompleto extends DriverFactory {
 
-    MenuPage menu = new MenuPage();
 
     @Before
     public void setupEach() {
@@ -25,14 +23,11 @@ public class FormularioCompleto extends DriverFactory {
 
     @Test
     public void realizaCadastroEVerificaValores() {
-        cmd.escrever(AppiumBy.accessibilityId("nome"),"Xablau");
-        cmd.selecionarCombo(AppiumBy.accessibilityId("console"),"Nintendo " +
-                "Switch");
-        //Começa desmarcado
-        cmd.clica(AppiumBy.className("android.widget.CheckBox"));
-        //Começa marcado
-        cmd.clica(AppiumBy.className("android.widget.Switch"));
-        cmd.clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]"));
+        formulario.preencheNome("Xablau");
+        formulario.selecionarCombo("Nintendo Switch");
+        formulario.clicarCheck();
+        formulario.clicarSwitch();
+        formulario.salvarFormulario();
 
 
         Assert.assertEquals("Nome: Xablau",cmd.obterTexto(AppiumBy.xpath("//android" +
