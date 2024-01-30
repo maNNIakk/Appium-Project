@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
     public static AndroidDriver driver;
-    public static CustomCommands cmd;
     public static MenuPage menu;
     public static FormularioPage formulario;
 
@@ -21,7 +20,6 @@ public class DriverFactory {
         ServerFactory.startAppiumServer();
 
         var options = DeviceConfiguration.getBaseOptions();
-        cmd = new CustomCommands();
         menu = new MenuPage();
         formulario = new FormularioPage();
 

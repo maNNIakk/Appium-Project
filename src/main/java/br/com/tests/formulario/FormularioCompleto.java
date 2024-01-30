@@ -1,7 +1,6 @@
 package br.com.tests.formulario;
 
 import br.com.core.DriverFactory;
-import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -30,11 +29,10 @@ public class FormularioCompleto extends DriverFactory {
         formulario.salvarFormulario();
 
 
-        Assert.assertEquals("Nome: Xablau",cmd.obterTexto(AppiumBy.xpath("//android" +
-                ".widget.TextView[@text=\"Nome: Xablau\"]")));
-        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[starts-with(@text, 'Console')]")).getText().contains("switch"));
-        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget" +
-                ".TextView[@text=\"Switch: Off\"]")).getText().endsWith("Off"));
-        Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Checkbox: Marcado\"]")).isDisplayed());
+        Assert.assertEquals("Nome: Xablau",formulario.obtemNomeCadastrado());
+        Assert.assertTrue(formulario.obtemConsoleCadastrado().contains("switch"));
+        Assert.assertTrue(formulario.obtemSwitchCadastrado().endsWith("Off"));
+        Assert.assertTrue(formulario.obterCheckboxCadastrado().endsWith(
+                "Marcado"));
     }
 }

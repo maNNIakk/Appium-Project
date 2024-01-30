@@ -1,10 +1,11 @@
 package br.com.page;
 
-import static br.com.core.DriverFactory.cmd;
+import br.com.core.BasePage;
 
-public class MenuPage {
+
+public class MenuPage extends BasePage {
 
     public void acessarFormulario(){
-        cmd.clicarPorTexto("Formulário");
+        clicarPorTexto("Formulário");
     }
 }

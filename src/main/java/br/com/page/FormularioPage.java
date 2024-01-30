@@ -1,52 +1,69 @@
 package br.com.page;
 
+import br.com.core.BasePage;
 import io.appium.java_client.AppiumBy;
 
-import static br.com.core.DriverFactory.cmd;
-
-public class FormularioPage {
+public class FormularioPage extends BasePage {
 
     public void preencheNome(String nome) {
-        cmd.escrever(AppiumBy.accessibilityId("nome"), nome);
+        escrever(AppiumBy.accessibilityId("nome"), nome);
     }
 
     public String obterNome() {
-        return cmd.obterTexto(AppiumBy.accessibilityId("nome"));
+        return obterTexto(AppiumBy.accessibilityId("nome"));
     }
 
     public void selecionarCombo(String valor) {
-        cmd.selecionarCombo(AppiumBy.accessibilityId("console"), valor);
+        selecionarCombo(AppiumBy.accessibilityId("console"), valor);
     }
 
     public String obterValorCombo() {
-        return cmd.obterTexto(AppiumBy.id("android:id/text1"));
+        return obterTexto(AppiumBy.id("android:id/text1"));
     }
 
     public void clicarCheck() {
-        cmd.clica(AppiumBy.className("android.widget" +
+        clica(AppiumBy.className("android.widget" +
                 ".CheckBox"));
     }
 
     public void clicarSwitch() {
-        cmd.clica(AppiumBy.className("android.widget" +
+        clica(AppiumBy.className("android.widget" +
                 ".Switch"));
     }
 
     public boolean isCheckMarcado() {
-        return cmd.isChecked(AppiumBy.className("android" +
+        return isChecked(AppiumBy.className("android" +
                 ".widget" +
                 ".CheckBox"));
     }
 
     public boolean isSwitchMarcado() {
-        return cmd.isChecked(AppiumBy.className("android.widget" +
+        return isChecked(AppiumBy.className("android.widget" +
                 ".Switch"));
     }
 
     public void salvarFormulario(){
-        cmd.clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]"));
+        clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]"));
     }
 
-    public
+    public String obtemNomeCadastrado(){
+        return obterTexto(AppiumBy.xpath("//android" +
+                ".widget.TextView[@text=\"Nome: Xablau\"]"));
+    }
 
+    public String obtemConsoleCadastrado(){
+        return obterTexto(AppiumBy.xpath("//android.widget" +
+                ".TextView[starts-with(@text, 'Console')]"));
+    }
+
+    public String obtemSwitchCadastrado(){
+        return obterTexto(AppiumBy.xpath("//android.widget" +
+                ".TextView[@text=\"Switch: Off\"]") );
+
+    }
+
+    public String obterCheckboxCadastrado(){
+        return obterTexto(AppiumBy.xpath("//android.widget" +
+                ".TextView[@text=\"Checkbox: Marcado\"]"));
+    }
 }
