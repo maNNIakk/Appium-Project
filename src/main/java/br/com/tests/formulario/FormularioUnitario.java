@@ -12,11 +12,6 @@ public class FormularioUnitario extends DriverFactory {
         menu.acessarFormulario();
     }
 
-//    @After
-//    public void tearDownEach() {
-//        driver.navigate().back();
-//    }
-
 
     @Test
     public void preencherCampoNomeFormulario() {
