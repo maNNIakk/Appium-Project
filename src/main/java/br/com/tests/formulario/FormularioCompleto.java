@@ -1,24 +1,21 @@
 package br.com.tests.formulario;
 
 import br.com.core.DriverFactory;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 
 public class FormularioCompleto extends DriverFactory {
 
 
-    @Before
-    public void setupEach() {
+    @BeforeClass
+    public static void setupEach() {
         menu.acessarFormulario();
          }
 
-    @After
-    public void tearDownEach() {
-        driver.navigate().back();
-    }
+//    @After
+//    public void tearDownEach() {
+//        driver.navigate().back();
+//    }
 
     @Test
     public void realizaCadastroEVerificaValores() {
