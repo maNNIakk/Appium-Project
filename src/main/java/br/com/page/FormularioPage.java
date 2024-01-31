@@ -75,4 +75,6 @@ public class FormularioPage extends BasePage {
         return obterTexto(AppiumBy.xpath("//android.widget" +
                 ".TextView[@text=\"Checkbox: Marcado\"]"));
     }
+
+
 }
