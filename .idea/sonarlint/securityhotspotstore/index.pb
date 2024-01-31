@@ -24,3 +24,7 @@ W
 'src/main/java/br/com/core/BasePage.java,0\c\0c436b8938d09d7c5acb02d68492f4e5360170a5
 ]
 -src/main/java/br/com/page/FormularioPage.java,f\6\f67deef23d9b1ac530a7ebfbcb64277b94997749
+Y
+)src/main/java/br/com/page/SplashPage.java,0\3\035394e4b5d12e545dbdb30446e6d98a570bfe88
+V
+&src/main/java/br/com/tests/Splash.java,e\6\e67e6f1ec2bb1d1da0e471e57a5f406078fc7a54

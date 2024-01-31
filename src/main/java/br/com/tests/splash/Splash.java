@@ -1,4 +1,4 @@
-package br.com.tests;
+package br.com.tests.splash;
 
 import br.com.core.DriverFactory;
 import org.junit.Assert;
