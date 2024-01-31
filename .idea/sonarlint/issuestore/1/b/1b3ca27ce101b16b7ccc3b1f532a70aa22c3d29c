@@ -1,19 +1,11 @@
 
-Y
-java:S3252"<Use static access with "org.openqa.selenium.By" for "xpath".(èÍÁ÷8÷ÅèÔ1
-R
-java:S2209"5Change this instance-reference to a static reference.(ùììÑ8‘÷ÅèÔ1
-R
-java:S2209 "5Change this instance-reference to a static reference.(Ëé˜Ù8 „ÇèÔ1
-^
-java:S3252!"<Use static access with "org.openqa.selenium.By" for "xpath".(ÃĞçıÿÿÿÿ8’÷ÅèÔ1
-^
-java:S3252'"<Use static access with "org.openqa.selenium.By" for "xpath".(‚ûµ­ıÿÿÿÿ8’÷ÅèÔ1
-Y
-java:S3252)"<Use static access with "org.openqa.selenium.By" for "xpath".(Æ·Ø”8’÷ÅèÔ1
-Y
-java:S3252*"<Use static access with "org.openqa.selenium.By" for "xpath".(Éü’«8“÷ÅèÔ1
-Y
-java:S3252+"<Use static access with "org.openqa.selenium.By" for "xpath".(Ùş´ø8“÷ÅèÔ1
-^
-java:S3252,"<Use static access with "org.openqa.selenium.By" for "xpath".(ˆÄƒ¨üÿÿÿÿ8“÷ÅèÔ1
+i
+java:S1192"GDefine a constant instead of duplicating this literal "Xablau" 4 times.(®«Çæıÿÿÿÿ8ô¢±èÕ1
+j
+java:S1192#"MDefine a constant instead of duplicating this literal "Nome: Xablau" 4 times.(´”ŒË8ô¢±èÕ1
+X
+java:S1874."6Remove this use of "implicitlyWait"; it is deprecated.(ı°ªÓùÿÿÿÿ8ÿ¢±èÕ1
+S
+java:S18748"6Remove this use of "implicitlyWait"; it is deprecated.(µ÷®8î‹¸èÕ1
+X
+java:S1874B"6Remove this use of "implicitlyWait"; it is deprecated.(ı°ªÓùÿÿÿÿ8ƒšîèÕ1

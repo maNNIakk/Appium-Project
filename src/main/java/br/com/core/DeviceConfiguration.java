@@ -11,7 +11,6 @@ public class DeviceConfiguration {
                 .amend("appium:udid", Devices.EMULATOR)
                 .amend("appium:app", "src//main//resources//CTAppium_2_0.apk")
                 .amend("platformName", "Android")
-                .amend("appium:deviceName", "emulator-5554")
                 .amend("appium:automationName", "UiAutomator2")
                 .amend("appium:appPackage", "com.ctappium")
                 .amend("appium:appActivity", "com.ctappium.MainActivity")
@@ -25,6 +24,9 @@ public class DeviceConfiguration {
                     .amend("appium:unlockType", "pin")
                     .amend("appium:unlockKey", "6210");
             System.out.println("CHEGUEI AQUI PO");
+        } else if (options.getCapability("appium:udid") == Devices.EMULATOR){
+            options
+            .amend("appium:deviceName", "emulator-5554");
         }
         return options;
     }

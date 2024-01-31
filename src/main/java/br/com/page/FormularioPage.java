@@ -46,6 +46,15 @@ public class FormularioPage extends BasePage {
         clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]"));
     }
 
+    public void salvarDemorado(){
+        clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR " +
+                "DEMORADO\"]"));
+    }
+
+    public void limparFormulario(){
+        clica(AppiumBy.xpath("//android.widget.TextView[@text=\"LIMPAR\"]"));
+    }
+
     public String obtemNomeCadastrado(){
         return obterTexto(AppiumBy.xpath("//android" +
                 ".widget.TextView[@text=\"Nome: Xablau\"]"));

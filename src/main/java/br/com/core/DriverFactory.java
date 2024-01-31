@@ -4,7 +4,10 @@ import br.com.page.FormularioPage;
 import br.com.page.MenuPage;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
-import org.junit.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -53,14 +56,23 @@ public class DriverFactory {
     }
 
     @After
-    public void tearDownFactory(){
-        DriverFactory.gerarScreenShot(testName.getMethodName());
+    public void tearDownFactory() {
+        DriverFactory.gerarScreenShot(getClass().getSimpleName() ,
+                testName.getMethodName());
     }
 
-    public static void gerarScreenShot(String methodName) {
+    public static void gerarScreenShot(String methodClass, String methodName) {
         try {
-            FileUtils.copyFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE), new File("target/screenshots/" + methodName + ".png"));
+            FileUtils.copyFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE), new File("target/screenshots/" + methodClass + "/" + methodName + ".png"));
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void esperar(long tempo){
+        try {
+            Thread.sleep(tempo);
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
