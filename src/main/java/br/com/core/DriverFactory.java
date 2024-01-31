@@ -2,6 +2,7 @@ package br.com.core;
 
 import br.com.page.FormularioPage;
 import br.com.page.MenuPage;
+import br.com.page.SplashPage;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
@@ -22,6 +23,7 @@ public class DriverFactory {
     public static AndroidDriver driver;
     public static MenuPage menu;
     public static FormularioPage formulario;
+    public static SplashPage splash;
 
     @Rule
     public TestName testName = new TestName();
@@ -33,6 +35,7 @@ public class DriverFactory {
         var options = DeviceConfiguration.getBaseOptions();
         menu = new MenuPage();
         formulario = new FormularioPage();
+        splash = new SplashPage();
 
         try {
             driver = new AndroidDriver(new URL("http://localhost:4723/"), options);

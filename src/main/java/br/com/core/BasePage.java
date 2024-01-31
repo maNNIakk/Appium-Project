@@ -2,6 +2,9 @@ package br.com.core;
 
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 import static br.com.core.DriverFactory.driver;
 
@@ -29,5 +32,11 @@ public class BasePage {
 
     public boolean isChecked(By by){
         return driver.findElement(by).getAttribute("checked").equals("true");
+    }
+
+    public boolean existeElementPorTexto(String texto){
+        List<WebElement> elements = driver.findElements(AppiumBy.xpath(
+                "//*[@text='" + texto + "']"));
+        return elements.size() > 0;
     }
 }
