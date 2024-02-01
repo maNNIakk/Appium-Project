@@ -1,11 +1,11 @@
 package br.com.tests.formulario;
 
-import br.com.core.DriverFactory;
+import br.com.core.BaseTest;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class FormularioUnitario extends DriverFactory {
+public class FormularioUnitario extends BaseTest {
 
     @BeforeClass
     public static void setupEach() {

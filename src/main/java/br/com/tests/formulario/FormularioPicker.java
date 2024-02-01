@@ -1,13 +1,13 @@
 package br.com.tests.formulario;
 
-import br.com.core.DriverFactory;
+import br.com.core.BaseTest;
 import io.appium.java_client.AppiumBy;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class FormularioPicker extends DriverFactory {
+public class FormularioPicker extends BaseTest {
     @BeforeClass
     public static void setupEach() {
         menu.acessarFormulario();
@@ -22,6 +22,7 @@ public class FormularioPicker extends DriverFactory {
         formulario.clicarPorTexto("01/01/2000");
         formulario.clicarPorTexto("20");
         formulario.clicarPorTexto("OK");
+
 
         Assert.assertTrue(formulario.existeElementPorTexto("20/01/2000"));
     }

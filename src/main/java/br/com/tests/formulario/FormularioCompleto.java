@@ -1,5 +1,6 @@
 package br.com.tests.formulario;
 
+import br.com.core.BaseTest;
 import br.com.core.DriverFactory;
 import org.junit.*;
 import org.openqa.selenium.By;
@@ -10,7 +11,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 
-public class FormularioCompleto extends DriverFactory {
+public class FormularioCompleto extends BaseTest {
 
 
     @BeforeClass
@@ -45,7 +46,7 @@ public class FormularioCompleto extends DriverFactory {
         formulario.preencheNome("Xablau");
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         formulario.salvarDemorado();
-        esperar(5000);
+        DriverFactory.esperar(5000);
 
         Assert.assertEquals("Nome: Xablau", formulario.obtemNomeCadastrado());
     }

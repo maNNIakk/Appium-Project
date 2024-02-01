@@ -3,9 +3,6 @@ package br.com.core;
 import br.com.page.*;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
@@ -16,6 +13,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import static br.com.core.BaseTest.driverFactory;
 
 public class DriverFactory {
     public static AndroidDriver driver;
@@ -30,7 +29,6 @@ public class DriverFactory {
     @Rule
     public TestName testName = new TestName();
 
-    @BeforeClass
     public static void setUpFactory() {
         ServerFactory.startAppiumServer();
 
@@ -56,17 +54,17 @@ public class DriverFactory {
     }
 
 
-    @AfterClass
-    public static void tearDownAllFactory() {
+
+    public static void tearDownAll() {
         driver.lockDevice();
         driver.quit();
         ServerFactory.stopAppiumServer();
+
     }
 
-    @After
-    public void tearDownFactory() {
-        DriverFactory.gerarScreenShot(getClass().getSimpleName() ,
-                testName.getMethodName());
+
+    public static void tearDownFactory() {
+        gerarScreenShot(DriverFactory.class.getSimpleName(), driverFactory.testName.getMethodName());
     }
 
     public static void gerarScreenShot(String methodClass, String methodName) {
@@ -77,7 +75,7 @@ public class DriverFactory {
         }
     }
 
-    public void esperar(long tempo){
+    public static void esperar(long tempo){
         try {
             Thread.sleep(tempo);
         } catch (InterruptedException e) {

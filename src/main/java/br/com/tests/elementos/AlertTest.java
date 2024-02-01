@@ -1,10 +1,10 @@
 package br.com.tests.elementos;
 
-import br.com.core.DriverFactory;
+import br.com.core.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AlertTest extends DriverFactory {
+public class AlertTest extends BaseTest {
     @Test
     public void deveConfirmarAlert(){
         menu.acessarAlertas();

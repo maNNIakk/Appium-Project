@@ -21,6 +21,7 @@ public class FormularioPage extends BasePage {
         return obterTexto(AppiumBy.id("android:id/text1"));
     }
 
+
     public void clicarCheck() {
         clica(AppiumBy.className("android.widget" +
                 ".CheckBox"));

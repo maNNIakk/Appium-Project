@@ -25,6 +25,7 @@ public class BasePage {
         clica(AppiumBy.xpath("//*[@text='" + texto + "']"));
     }
 
+
     public void selecionarCombo(By by, String valor) {
         driver.findElement(by).click();
         clicarPorTexto(valor);
