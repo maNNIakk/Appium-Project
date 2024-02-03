@@ -77,5 +77,15 @@ public class FormularioPage extends BasePage {
                 ".TextView[@text=\"Checkbox: Marcado\"]"));
     }
 
+    public String obterSliderCadastrado(){
+        return obterTexto(AppiumBy.xpath("//android.widget" +
+                ".TextView[@text=\"Slider: 32\"]"));
+
+    }
+    public void setaValorDaSeekBar(double valorDaSeekBar){
+        interageComSeekBar(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"slid\"]/android.view.ViewGroup[3]"),valorDaSeekBar);
+    }
+
+
 
 }

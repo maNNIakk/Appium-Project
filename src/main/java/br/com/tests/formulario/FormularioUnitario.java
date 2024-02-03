@@ -41,4 +41,15 @@ public class FormularioUnitario extends BaseTest {
     }
 
 
+    @Test
+    public void modificaValorNaSeekBar(){
+        formulario.setaValorDaSeekBar(0.32);
+        formulario.salvarFormulario();
+        Assert.assertEquals("Slider: 32",formulario.obterSliderCadastrado());
+
+    }
+
+
+
+
 }

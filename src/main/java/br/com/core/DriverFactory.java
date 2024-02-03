@@ -3,8 +3,6 @@ package br.com.core;
 import br.com.page.*;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
-import org.junit.Rule;
-import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -14,8 +12,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import static br.com.core.BaseTest.driverFactory;
-
 public class DriverFactory {
     public static AndroidDriver driver;
     public static MenuPage menu;
@@ -24,10 +20,6 @@ public class DriverFactory {
     public static AlertaPage alerta;
     public static AbasPage abas;
     public static AccordionPage accordion;
-
-
-    @Rule
-    public TestName testName = new TestName();
 
     public static void setUpFactory() {
         ServerFactory.startAppiumServer();
@@ -63,10 +55,6 @@ public class DriverFactory {
     }
 
 
-    public static void tearDownFactory() {
-        gerarScreenShot(DriverFactory.class.getSimpleName(), driverFactory.testName.getMethodName());
-    }
-
     public static void gerarScreenShot(String methodClass, String methodName) {
         try {
             FileUtils.copyFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE), new File("target/screenshots/" + methodClass + "/" + methodName + ".png"));
@@ -74,7 +62,6 @@ public class DriverFactory {
             e.printStackTrace();
         }
     }
-
     public static void esperar(long tempo){
         try {
             Thread.sleep(tempo);

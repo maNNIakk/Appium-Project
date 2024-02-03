@@ -1,7 +1,6 @@
 package br.com.page;
 
 import br.com.core.BasePage;
-import io.appium.java_client.AppiumBy;
 
 public class AlertaPage extends BasePage {
 
@@ -9,19 +8,19 @@ public class AlertaPage extends BasePage {
         clicarPorTexto("ALERTA CONFIRM");
     }
 
-    public String obterTituloAlerta() {
-        return obterTexto(AppiumBy.id("android:id/alertTitle"));
+    public void clicarAlertaSimples() {
+        clicarPorTexto("ALERTA SIMPLES");
     }
 
-    public String obterMensagemAlerta() {
-        return obterTexto(AppiumBy.id("android:id/message"));
-    }
-
-    public void confirmar(){
+    public void confirmar() {
         clicarPorTexto("CONFIRMAR");
     }
 
-    public void sair(){
+    public void sair() {
         clicarPorTexto("SAIR");
+    }
+
+    public void clicarForaCaixa() {
+        tap(100, 150);
     }
 }

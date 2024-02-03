@@ -5,6 +5,10 @@ import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Rule;
+import org.junit.rules.TestName;
+
+import static br.com.core.DriverFactory.gerarScreenShot;
 
 
 public class BaseTest {
@@ -16,10 +20,13 @@ public class BaseTest {
     public static AbasPage abas;
     public static AccordionPage accordion;
     public static DriverFactory driverFactory = new DriverFactory();
+    public static CliquesPage clique;
 
+    @Rule
+    public TestName testName = new TestName();
 
     @BeforeClass
-    public static void setup() {
+    public static void setupAll() {
 
         driverFactory.setUpFactory();
         driver = driverFactory.driver;
@@ -29,17 +36,18 @@ public class BaseTest {
         alerta = new AlertaPage();
         abas = new AbasPage();
         accordion = new AccordionPage();
+        clique = new CliquesPage();
     }
 
     @AfterClass
     public static void tearDownTest() {
         driverFactory.tearDownAll();
+
     }
 
     @After
     public void tearDownAfterTest() {
-        driverFactory.tearDownFactory();
+        gerarScreenShot(getClass().getSimpleName(),
+                testName.getMethodName());
     }
-
-
 }

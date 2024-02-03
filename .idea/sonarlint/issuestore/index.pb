@@ -44,3 +44,9 @@ k
 ;src/main/java/br/com/tests/formulario/FormularioPicker.java,0\b\0b4846e5515d7044340f580c617429e3b8f39b2c
 W
 'src/main/java/br/com/core/BaseTest.java,2\8\28769e016079c553dbd05ea03c69b648f5e2ffee
+Z
+*src/main/java/br/com/page/CliquesPage.java,7\f\7f5d9e8d7fa44bc321c25c336eb3fafb30c21090
+e
+5src/main/java/br/com/tests/elementos/CliquesTest.java,3\5\351ca6cd5887b2618b7bcffc5ca08fd4414af3d9
+i
+9src/main/java/br/com/tests/elementos/ScrollSwipeTest.java,b\e\be19f20c56e3c07e7af13900357d90b972b9bc1d

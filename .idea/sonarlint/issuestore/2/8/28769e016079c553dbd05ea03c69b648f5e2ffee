@@ -1,41 +1,45 @@
 
 t
-java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(ËÂ®’üÿÿÿÿ8¢×Ê«Ö1
+java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(ËÂ®’üÿÿÿÿ8ÎåãŞÖ1
 r
-java:S1104"PMake menu a static final constant or non-public and provide accessors if needed.(™é»Ûøÿÿÿÿ8¢×Ê«Ö1
+java:S1104"PMake menu a static final constant or non-public and provide accessors if needed.(™é»Ûøÿÿÿÿ8ÎåãŞÖ1
 r
-java:S1104"VMake formulario a static final constant or non-public and provide accessors if needed.(¬êˆs8¢×Ê«Ö1
+java:S1104"VMake formulario a static final constant or non-public and provide accessors if needed.(¬êˆs8ÏåãŞÖ1
 o
-java:S1104"RMake splash a static final constant or non-public and provide accessors if needed.(™»èˆ8¢×Ê«Ö1
+java:S1104"RMake splash a static final constant or non-public and provide accessors if needed.(™»èˆ8ÏåãŞÖ1
 o
-java:S1104"RMake alerta a static final constant or non-public and provide accessors if needed.(†Œéü8¢×Ê«Ö1
+java:S1104"RMake alerta a static final constant or non-public and provide accessors if needed.(†Œéü8ÏåãŞÖ1
 r
-java:S1104"PMake abas a static final constant or non-public and provide accessors if needed.(÷»–’üÿÿÿÿ8¢×Ê«Ö1
+java:S1104"PMake abas a static final constant or non-public and provide accessors if needed.(÷»–’üÿÿÿÿ8ÏåãŞÖ1
 r
-java:S1104"UMake accordion a static final constant or non-public and provide accessors if needed.(‰’‡8¢×Ê«Ö1
+java:S1104"UMake accordion a static final constant or non-public and provide accessors if needed.(‰’‡8ÏåãŞÖ1
 {
-java:S1104"YMake driverFactory a static final constant or non-public and provide accessors if needed.(ªÄ’±şÿÿÿÿ8¢×Ê«Ö1
+java:S1104"YMake driverFactory a static final constant or non-public and provide accessors if needed.(ªÄ’±şÿÿÿÿ8ÏåãŞÖ1
+t
+java:S1104"RMake clique a static final constant or non-public and provide accessors if needed.(œÉôôøÿÿÿÿ8ÏåãŞÖ1
 N
-java:S1444",Make this "public static driver" field final(ËÂ®’üÿÿÿÿ8¢×Ê«Ö1
+java:S1444",Make this "public static driver" field final(ËÂ®’üÿÿÿÿ8ÏåãŞÖ1
 L
-java:S1444"*Make this "public static menu" field final(™é»Ûøÿÿÿÿ8¢×Ê«Ö1
+java:S1444"*Make this "public static menu" field final(™é»Ûøÿÿÿÿ8ÏåãŞÖ1
 L
-java:S1444"0Make this "public static formulario" field final(¬êˆs8£×Ê«Ö1
+java:S1444"0Make this "public static formulario" field final(¬êˆs8ÏåãŞÖ1
 I
-java:S1444",Make this "public static splash" field final(™»èˆ8£×Ê«Ö1
+java:S1444",Make this "public static splash" field final(™»èˆ8ÏåãŞÖ1
 I
-java:S1444",Make this "public static alerta" field final(†Œéü8£×Ê«Ö1
+java:S1444",Make this "public static alerta" field final(†Œéü8ÏåãŞÖ1
 L
-java:S1444"*Make this "public static abas" field final(÷»–’üÿÿÿÿ8£×Ê«Ö1
+java:S1444"*Make this "public static abas" field final(÷»–’üÿÿÿÿ8ÏåãŞÖ1
 L
-java:S1444"/Make this "public static accordion" field final(‰’‡8£×Ê«Ö1
+java:S1444"/Make this "public static accordion" field final(‰’‡8ÏåãŞÖ1
 U
-java:S1444"3Make this "public static driverFactory" field final(ªÄ’±şÿÿÿÿ8£×Ê«Ö1
+java:S1444"3Make this "public static driverFactory" field final(ªÄ’±şÿÿÿÿ8ÏåãŞÖ1
+N
+java:S1444",Make this "public static clique" field final(œÉôôøÿÿÿÿ8ĞåãŞÖ1
+O
+java:S2440"-Remove this instantiation of "DriverFactory".(ªÄ’±şÿÿÿÿ8ßåãŞÖ1
 W
-java:S2209"5Change this instance-reference to a static reference.(”‘Ñáùÿÿÿÿ8°×Ê«Ö1
+java:S2209"5Change this instance-reference to a static reference.(”‘Ñáùÿÿÿÿ8áåãŞÖ1
 R
-java:S2209"5Change this instance-reference to a static reference.(Êšãî8°×Ê«Ö1
+java:S2209 "5Change this instance-reference to a static reference.(Êšãî8áåãŞÖ1
 W
-java:S2209$"5Change this instance-reference to a static reference.(àÈğ’üÿÿÿÿ8±×Ê«Ö1
-R
-java:S2209)"5Change this instance-reference to a static reference.(Û‚8ù‡Ë«Ö1
+java:S2209,"5Change this instance-reference to a static reference.(àÈğ’üÿÿÿÿ8ïÇ›ßÖ1

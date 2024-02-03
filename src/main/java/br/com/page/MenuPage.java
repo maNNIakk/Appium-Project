@@ -13,13 +13,23 @@ public class MenuPage extends BasePage {
         clicarPorTexto("Splash");
     }
 
-    public void acessarAlertas(){ clicarPorTexto("Alertas");}
+    public void acessarAlertas() {
+        clicarPorTexto("Alertas");
+    }
 
-    public void acessarAbas(){
+    public void acessarAbas() {
         clicarPorTexto("Abas");
     }
 
-    public void acessarAccordion(){
+    public void acessarAccordion() {
         clicarPorTexto("Accordion");
+    }
+
+    public void acessarCliques() {
+        clicarPorTexto("Cliques");
+    }
+
+    public void acessarSwipe() {
+        clicarPorTexto("Swipe");
     }
 }
