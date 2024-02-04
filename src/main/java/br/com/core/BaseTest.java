@@ -23,6 +23,7 @@ public class BaseTest {
     public static CliquesPage clique;
     public static SwipeListPage swipeList;
     public static DragDropPage dragDropd;
+    public static WebViewPage webView;
 
     @Rule
     public TestName testName = new TestName();
@@ -41,6 +42,7 @@ public class BaseTest {
         clique = new CliquesPage();
         swipeList = new SwipeListPage();
         dragDropd = new DragDropPage();
+        webView = new WebViewPage();
     }
 
     @AfterClass

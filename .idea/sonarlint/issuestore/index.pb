@@ -52,9 +52,11 @@ i
 9src/main/java/br/com/tests/elementos/ScrollSwipeTest.java,b\e\be19f20c56e3c07e7af13900357d90b972b9bc1d
 \
 ,src/main/java/br/com/page/SwipeListPage.java,e\6\e652ff2c915ebab495e28fd53538fa03e45e8186
-g
-7src/main/java/br/com/tests/elementos/DragNDropTest.java,2\1\21008d6c6fa4fbb1e23d82fe0e1180ea66ed469e
 [
 +src/main/java/br/com/page/DragDropPage.java,5\0\505d457d8a2541d5ce55448da0f7f1880aab3c09
 f
 6src/main/java/br/com/tests/elementos/DragDropTest.java,0\2\02efdc5977aa4b6a113156f73b56fb1963c6db74
+b
+2src/main/java/br/com/tests/outros/WebViewTest.java,e\f\efb7e5eadd4b1bb66e98d820516b862cbbcf0208
+Z
+*src/main/java/br/com/page/WebViewPage.java,4\1\41c2a2c32763e706583c0566f8431f12f9a40cfb

@@ -32,12 +32,17 @@ public class MenuPage extends BasePage {
     public void acessarSwipe() {
         clicarPorTexto("Swipe");
     }
+
     public void acessarSwipeList() {
         clicarPorTexto("Swipe List");
     }
 
-    public void acessarDragDrop(){
+    public void acessarDragDrop() {
         scrollScreenDown();
         clicarPorTexto("Drag and drop");
+    }
+
+    public void acessarSBHibrido() {
+        clicarPorTexto("SeuBarriga Híbrido");
     }
 }

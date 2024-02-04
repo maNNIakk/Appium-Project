@@ -33,7 +33,8 @@ public class DriverFactory {
         accordion = new AccordionPage();
 
         try {
-            driver = new AndroidDriver(new URL("http://localhost:4723/"), options);
+            driver = new AndroidDriver(new URL("http://localhost:4723/"),
+                    options);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

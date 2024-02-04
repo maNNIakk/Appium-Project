@@ -21,6 +21,8 @@ w
 java:S1104"UMake swipeList a static final constant or non-public and provide accessors if needed.(µÌ¿ïùÿÿÿÿ8ù¤œ×1
 w
 java:S1104"UMake dragDropd a static final constant or non-public and provide accessors if needed.(ˆÅÔ’úÿÿÿÿ8€¢Ÿ×1
+p
+java:S1104"SMake webView a static final constant or non-public and provide accessors if needed.(Ê¤ü8”¹˜«×1
 N
 java:S1444",Make this "public static driver" field final(ËÂ®’üÿÿÿÿ8ù¤œ×1
 L
@@ -43,11 +45,13 @@ Q
 java:S1444"/Make this "public static swipeList" field final(µÌ¿ïùÿÿÿÿ8ù¤œ×1
 Q
 java:S1444"/Make this "public static dragDropd" field final(ˆÅÔ’úÿÿÿÿ8¢Ÿ×1
+J
+java:S1444"-Make this "public static webView" field final(Ê¤ü8•¹˜«×1
 O
 java:S2440"-Remove this instantiation of "DriverFactory".(ªÄ’±şÿÿÿÿ8ˆ¥œ×1
 W
-java:S2209!"5Change this instance-reference to a static reference.(”‘Ñáùÿÿÿÿ8Š¥œ×1
+java:S2209""5Change this instance-reference to a static reference.(”‘Ñáùÿÿÿÿ8Š¥œ×1
 R
-java:S2209""5Change this instance-reference to a static reference.(Êšãî8Š¥œ×1
+java:S2209#"5Change this instance-reference to a static reference.(Êšãî8Š¥œ×1
 W
-java:S22090"5Change this instance-reference to a static reference.(àÈğ’üÿÿÿÿ8‹¥œ×1
+java:S22092"5Change this instance-reference to a static reference.(àÈğ’üÿÿÿÿ8‹¥œ×1
