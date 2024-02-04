@@ -21,6 +21,8 @@ public class BaseTest {
     public static AccordionPage accordion;
     public static DriverFactory driverFactory = new DriverFactory();
     public static CliquesPage clique;
+    public static SwipeListPage swipeList;
+    public static DragDropPage dragDropd;
 
     @Rule
     public TestName testName = new TestName();
@@ -37,6 +39,8 @@ public class BaseTest {
         abas = new AbasPage();
         accordion = new AccordionPage();
         clique = new CliquesPage();
+        swipeList = new SwipeListPage();
+        dragDropd = new DragDropPage();
     }
 
     @AfterClass

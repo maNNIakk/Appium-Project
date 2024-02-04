@@ -1,19 +1,28 @@
 
 Q
-java:S37401"/Provide the parametrized type for this generic.(ÃçıÉøÿÿÿÿ8»¡®ÛÖ1
+java:S37401"/Provide the parametrized type for this generic.(ÃçıÉøÿÿÿÿ8 Óàƒ×1
 Q
-java:S3740B"/Provide the parametrized type for this generic.(¢¢Ğ¨üÿÿÿÿ8»¡®ÛÖ1
+java:S3740B"/Provide the parametrized type for this generic.(¢¢Ğ¨üÿÿÿÿ8 Óàƒ×1
 L
-java:S3740L"/Provide the parametrized type for this generic.(ñîÇØ8»¡®ÛÖ1
+java:S3740L"/Provide the parametrized type for this generic.(ñîÇØ8 Óàƒ×1
+L
+java:S3740V"/Provide the parametrized type for this generic.(ñîÇØ8 Óàƒ×1
 K
-java:S3740W"/Provide the parametrized type for this generic.(²ªı~8»¡®ÛÖ1
+java:S3740l"/Provide the parametrized type for this generic.(²ªı~8 Óàƒ×1
+K
+java:S3740|"/Provide the parametrized type for this generic.(²ªı~8“Ñƒˆ×1
 [
-java:S1155-">Use isEmpty() to check whether the collection is empty or not.(³ã²8Ï¡®ÛÖ1
+java:S1155-">Use isEmpty() to check whether the collection is empty or not.(³ã²8°Óàƒ×1
 U
-java:S18741"3Remove this use of "TouchAction"; it is deprecated.(ÃçıÉøÿÿÿÿ8Ò¡®ÛÖ1
+java:S18741"3Remove this use of "TouchAction"; it is deprecated.(ÃçıÉøÿÿÿÿ8²Óàƒ×1
 U
-java:S1874B"3Remove this use of "TouchAction"; it is deprecated.(¢¢Ğ¨üÿÿÿÿ8Ó¡®ÛÖ1
+java:S1874B"3Remove this use of "TouchAction"; it is deprecated.(¢¢Ğ¨üÿÿÿÿ8³Óàƒ×1
 P
-java:S1874L"3Remove this use of "TouchAction"; it is deprecated.(ñîÇØ8Ô¡®ÛÖ1
+java:S1874L"3Remove this use of "TouchAction"; it is deprecated.(ñîÇØ8³Óàƒ×1
+G	java:S106Q"+Replace this use of System.out by a logger.(–İÅ8´Óàƒ×1
+P
+java:S1874V"3Remove this use of "TouchAction"; it is deprecated.(ñîÇØ8´Óàƒ×1
 O
-java:S1874W"3Remove this use of "TouchAction"; it is deprecated.(²ªı~8Õ¡®ÛÖ1
+java:S1874l"3Remove this use of "TouchAction"; it is deprecated.(²ªı~8¶Óàƒ×1
+O
+java:S1874|"3Remove this use of "TouchAction"; it is deprecated.(²ªı~8±Ñƒˆ×1

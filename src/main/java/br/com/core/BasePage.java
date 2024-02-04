@@ -66,7 +66,7 @@ public class BasePage {
         new TouchAction(driver).longPress(ElementOption.element(driver.findElement(locator))).release().perform();
     }
 
-    public void scroll(double inicio, double fim) {
+    public void scrollScreen(double inicio, double fim) {
         Dimension size = driver.manage().window().getSize();
 
         int x = size.width / 2;
@@ -76,7 +76,28 @@ public class BasePage {
         new TouchAction(driver).longPress(PointOption.point(x, yInicial)).moveTo(PointOption.point(x, yFinal)).release().perform();
     }
 
-    public void swipe(double inicio, double fim) {
+    public void scrollElement(By by ,double inicio, double fim) {
+        Dimension size = driver.findElement(by).getSize();
+        System.out.println(size);
+        int x = size.width / 2;
+        int yInicial = (int) (size.height * inicio);
+        int yFinal = (int) (size.height * fim);
+
+        new TouchAction(driver).longPress(PointOption.point(x, yInicial)).moveTo(PointOption.point(x, yFinal)).release().perform();
+    }
+
+    public void scrollScreenDown(){
+        scrollScreen(0.9,0.1);
+    }
+
+    public void scrollScreenUp(){
+        scrollScreen(0.1,0.9);
+    }
+    public void scrollElementDown(By by){
+        scrollElement(by,0.1,0.9);
+    }
+
+    public void swipeScreen(double inicio, double fim) {
         Dimension size = driver.manage().window().getSize();
 
         int y = size.height / 2;
@@ -89,6 +110,30 @@ public class BasePage {
                 .moveTo(PointOption.point(xFinal, y))
                 .release()
                 .perform();
+    }
+
+    public void swipeElement(By by, double inicio,
+                             double fim) {
+        WebElement element = driver.findElement(by);
+
+        int y = element.getLocation().y + (element.getSize().height/2);
+
+        int xInicial = (int) (element.getSize().width * inicio);
+        int xFinal = (int) (element.getSize().width * fim);
+
+        new TouchAction(driver)
+                .longPress(PointOption.point(xInicial, y))
+                .moveTo(PointOption.point(xFinal, y))
+                .release()
+                .perform();
+    }
+
+    public void swipeScreenLeft(){
+        swipeScreen(0.1,0.9);
+    }
+
+    public void swipeScreenRight(){
+        swipeScreen(0.9,0.1);
     }
 
     public String obterTituloAlerta() {
