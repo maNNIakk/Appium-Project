@@ -24,6 +24,8 @@ public class BaseTest {
     public static SwipeListPage swipeList;
     public static DragDropPage dragDropd;
     public static WebViewPage webView;
+    public static SBNativoPage barrigaNativo;
+
 
     @Rule
     public TestName testName = new TestName();
@@ -43,6 +45,7 @@ public class BaseTest {
         swipeList = new SwipeListPage();
         dragDropd = new DragDropPage();
         webView = new WebViewPage();
+        barrigaNativo = new SBNativoPage();
     }
 
     @AfterClass

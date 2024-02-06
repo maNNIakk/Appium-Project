@@ -2,6 +2,7 @@ package br.com.tests.outros;
 
 import br.com.core.BaseTest;
 import br.com.core.DriverFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class WebViewTest extends BaseTest {
@@ -15,6 +16,8 @@ public class WebViewTest extends BaseTest {
         webView.setSenha("teste321");
         webView.clicarPorTexto("Entrar");
         DriverFactory.esperar(3000);
+
+        Assert.assertTrue(webView.isTelaLogada());
     }
 
 }

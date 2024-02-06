@@ -16,4 +16,10 @@ public class WebViewPage extends BasePage {
         driver.findElement(AppiumBy.xpath("//android.widget.EditText[@resource-id=\"senha\"]")).sendKeys(valor);
     }
 
+    public boolean isTelaLogada(){
+       return driver.findElement(AppiumBy.xpath("//android.view" +
+                ".View[@text=\"Bem " +
+                "vindo, renato!\"]")).isDisplayed();
+    }
+
 }

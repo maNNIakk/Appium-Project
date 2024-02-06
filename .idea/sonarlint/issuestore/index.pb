@@ -60,3 +60,7 @@ b
 2src/main/java/br/com/tests/outros/WebViewTest.java,e\f\efb7e5eadd4b1bb66e98d820516b862cbbcf0208
 Z
 *src/main/java/br/com/page/WebViewPage.java,4\1\41c2a2c32763e706583c0566f8431f12f9a40cfb
+[
++src/main/java/br/com/page/SBNativoPage.java,2\2\228cbdb0bf6c6dcd46ee75ddf316b88c90aded52
+n
+>src/main/java/br/com/tests/aplicacao/SeuBarrigaNativoTest.java,c\2\c278e8462d3e086faf982bcf1bae04dc2f2572e6

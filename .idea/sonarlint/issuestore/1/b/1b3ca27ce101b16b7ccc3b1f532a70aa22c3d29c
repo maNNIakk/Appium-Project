@@ -3,3 +3,9 @@ i
 java:S1192"GDefine a constant instead of duplicating this literal "Xablau" 4 times.(®«Çæýÿÿÿÿ8ô¢±èÕ1
 j
 java:S1192$"MDefine a constant instead of duplicating this literal "Nome: Xablau" 4 times.(´”ŒË8ô¢±èÕ1
+X
+java:S1874/"6Remove this use of "implicitlyWait"; it is deprecated.(ý°ªÓùÿÿÿÿ8Þ¡š¯×1
+S
+java:S18749"6Remove this use of "implicitlyWait"; it is deprecated.(µŽ÷®8à¡š¯×1
+X
+java:S1874C"6Remove this use of "implicitlyWait"; it is deprecated.(ý°ªÓùÿÿÿÿ8á¡š¯×1
