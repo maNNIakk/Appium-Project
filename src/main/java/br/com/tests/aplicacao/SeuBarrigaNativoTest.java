@@ -1,6 +1,7 @@
 package br.com.tests.aplicacao;
 
 import br.com.core.BaseTest;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -12,14 +13,19 @@ public class SeuBarrigaNativoTest extends BaseTest {
         barrigaNativo.login();
     }
 
+    @AfterClass
+    public static void tearDown() {
+        barrigaNativo.irParaHomePage();
+        barrigaNativo.resetaConta();
+    }
+
 
     @Test
     public void inserirConta() {
         barrigaNativo.insereConta();
         Assert.assertTrue(barrigaNativo.existeElementPorTexto("Conta adicionada com sucesso"));
         Assert.assertTrue(barrigaNativo.existeElementPorTexto("Conta do Xablau"));
-        barrigaNativo.irParaHomePage();
-        barrigaNativo.resetaConta();
+
 
     }
 
@@ -27,8 +33,8 @@ public class SeuBarrigaNativoTest extends BaseTest {
     public void excluirConta() {
         barrigaNativo.insereConta();
         barrigaNativo.excluiConta();
-        Assert.assertFalse(barrigaNativo.existeElementPorTexto("Conta do " +
-                "Xablau"));
+        Assert.assertFalse(barrigaNativo.existeElementPorTexto("Conta para " +
+                "excluir"));
     }
 
     @Test
@@ -48,6 +54,25 @@ public class SeuBarrigaNativoTest extends BaseTest {
         Assert.assertTrue(barrigaNativo.existeElementPorTexto("Conta é um " +
                 "campo obrigatório"));
         barrigaNativo.preencheConta("Conta para movimentacoes");
+        barrigaNativo.salvar();
+        Assert.assertTrue(barrigaNativo.existeElementPorTexto("Movimentação " +
+                "cadastrada com sucesso"));
+
+
+    }
+
+    @Test
+    public void excluiMovimentacaoEVerificaSaldo() {
+        Assert.assertEquals("534.00", barrigaNativo.obterSaldoConta("Conta " +
+                "para saldo"));
+        barrigaNativo.clicarPorTexto("Resumo");
+        barrigaNativo.excluiMovimentacao("Movimentacao 3, calculo saldo");
+        Assert.assertTrue(barrigaNativo.existeElementPorTexto("Movimentação " +
+                "removida com sucesso!"));
+        barrigaNativo.irParaHomePage();
+        barrigaNativo.scrollScreen(0.2,0.9);
+        Assert.assertEquals("-1000.00",barrigaNativo.obterSaldoConta("Conta " +
+                "para saldo"));
 
     }
 

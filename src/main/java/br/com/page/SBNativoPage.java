@@ -3,6 +3,7 @@ package br.com.page;
 import br.com.core.BasePage;
 import br.com.core.DriverFactory;
 import io.appium.java_client.AppiumBy;
+import org.openqa.selenium.WebElement;
 
 public class SBNativoPage extends BasePage {
     public void login() {
@@ -35,7 +36,7 @@ public class SBNativoPage extends BasePage {
         clica(AppiumBy.xpath("//android.widget.TextView[@resource-id=\"android:id/text1\" and @text=\"Selecione uma conta...\"]"));
         clicarPorTexto(contaText);
 
-        }
+    }
 
 
     public void irParaHomePage() {
@@ -64,5 +65,18 @@ public class SBNativoPage extends BasePage {
 
     public void salvar() {
         clica(AppiumBy.xpath("//android.widget.TextView[@text=\"SALVAR\"]"));
+    }
+
+    public String obterSaldoConta(String conta) {
+        return obterTexto(AppiumBy.xpath("//*[@text='" + conta + "']/following" +
+                "-sibling::android.widget.TextView"));
+    }
+
+    public void excluiMovimentacao(String desc){
+        WebElement el = DriverFactory.driver.findElement(AppiumBy.xpath(
+                "//*[@text='" + desc + "']/.."));
+        swipeElement(AppiumBy.xpath("//*[@text='" + desc + "']/../.."),0.9,0.1);
+        clicarPorTexto("Del");
+
     }
 }
