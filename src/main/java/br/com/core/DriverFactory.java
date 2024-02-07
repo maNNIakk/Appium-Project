@@ -21,8 +21,16 @@ public class DriverFactory {
     public static AbasPage abas;
     public static AccordionPage accordion;
 
+    public static AndroidDriver getDriver(){
+        if (driver == null){
+            throw new IllegalStateException("Driver has not been initialized " +
+                    "porra");
+        }
+        return driver;
+    }
+
     public static void setUpFactory() {
-        ServerFactory.startAppiumServer();
+//        ServerFactory.startAppiumServer();
 
         var options = DeviceConfiguration.getBaseOptions();
         menu = new MenuPage();
@@ -33,13 +41,17 @@ public class DriverFactory {
         accordion = new AccordionPage();
 
         try {
-            driver = new AndroidDriver(new URL("http://localhost:4723/"),
-                    options);
+            if (driver == null) {
+                driver = new AndroidDriver(new URL("https" +
+                        "://ondemand" +
+                        ".us-west-1.saucelabs.com:443/wd/hub"),
+                        options);
+                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                driver.unlockDevice();
+            }
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.unlockDevice();
         //       Apenas para a versão 1.2
         //        driver.findElement(AppiumBy.id("android:id/button1"))
         //        .click();
@@ -47,13 +59,17 @@ public class DriverFactory {
     }
 
 
-
-    public static void tearDownAll() {
-        driver.lockDevice();
-        driver.quit();
-        ServerFactory.stopAppiumServer();
-
-    }
+//    @AfterClass
+//    public static void tearDownAll() {
+//        if (driver != null) {
+//            driver.lockDevice();
+//
+//            driver.quit();
+//            driver = null;
+//        }
+////        ServerFactory.stopAppiumServer();
+//
+//    }
 
 
     public static void gerarScreenShot(String methodClass, String methodName) {
@@ -63,7 +79,8 @@ public class DriverFactory {
             e.printStackTrace();
         }
     }
-    public static void esperar(long tempo){
+
+    public static void esperar(long tempo) {
         try {
             Thread.sleep(tempo);
         } catch (InterruptedException e) {

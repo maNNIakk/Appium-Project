@@ -64,3 +64,5 @@ Z
 +src/main/java/br/com/page/SBNativoPage.java,2\2\228cbdb0bf6c6dcd46ee75ddf316b88c90aded52
 n
 >src/main/java/br/com/tests/aplicacao/SeuBarrigaNativoTest.java,c\2\c278e8462d3e086faf982bcf1bae04dc2f2572e6
+X
+(src/main/java/br/com/core/TestSuite.java,3\0\3002545cfd1a5b467f663b497bd856fbc3cca11d

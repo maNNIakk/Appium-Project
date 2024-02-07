@@ -17,6 +17,7 @@ public class SeuBarrigaNativoTest extends BaseTest {
     public static void tearDown() {
         barrigaNativo.irParaHomePage();
         barrigaNativo.resetaConta();
+        driver.navigate().back();
     }
 
 

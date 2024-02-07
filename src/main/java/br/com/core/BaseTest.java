@@ -3,7 +3,6 @@ package br.com.core;
 import br.com.page.*;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TestName;
@@ -34,7 +33,7 @@ public class BaseTest {
     public static void setupAll() {
 
         driverFactory.setUpFactory();
-        driver = driverFactory.driver;
+        driver = driverFactory.getDriver();
         menu = new MenuPage();
         formulario = new FormularioPage();
         splash = new SplashPage();
@@ -48,11 +47,11 @@ public class BaseTest {
         barrigaNativo = new SBNativoPage();
     }
 
-    @AfterClass
-    public static void tearDownTest() {
-        driverFactory.tearDownAll();
-
-    }
+//    @AfterClass
+//    public static void tearDownTest() {
+//        driverFactory.tearDownAll();
+//
+//    }
 
     @After
     public void tearDownAfterTest() {

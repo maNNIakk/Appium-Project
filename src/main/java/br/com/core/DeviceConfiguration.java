@@ -1,33 +1,25 @@
 package br.com.core;
 
-import br.com.properties.Devices;
-import io.appium.java_client.remote.options.BaseOptions;
+import org.openqa.selenium.MutableCapabilities;
 
 public class DeviceConfiguration {
 
 
-    public static BaseOptions getBaseOptions() {
-        BaseOptions options = new BaseOptions()
-                .amend("appium:udid", Devices.EMULATOR)
-                .amend("appium:app", "src//main//resources//CTAppium_2_0.apk")
-                .amend("platformName", "Android")
-                .amend("appium:automationName", "UiAutomator2")
-                .amend("appium:appPackage", "com.ctappium")
-                .amend("appium:appActivity", "com.ctappium.MainActivity")
-                .amend("appium:noReset", false)
-                .amend("appium:fullReset", true)
-                .amend("appium:autoGrantPermissions", true)
-                .amend("appium:nativeWebScreenshot", true)
-                .amend("appium:newCommandTimeout", 6500);
-        if (options.getCapability("appium:udid") == Devices.PHYSICAL_DEVICE_UDID) {
-            options
-                    .amend("appium:unlockType", "pin")
-                    .amend("appium:unlockKey", "6210");
-            System.out.println("CHEGUEI AQUI PO");
-        } else if (options.getCapability("appium:udid") == Devices.EMULATOR){
-            options
-            .amend("appium:deviceName", "emulator-5554");
-        }
-        return options;
+    public static MutableCapabilities getBaseOptions() {
+        MutableCapabilities caps = new MutableCapabilities();
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("appium:app", "storage:filename=CTAppium_2_0.apk");  // The filename of the mobile app
+        caps.setCapability("appium:deviceName", "Android GoogleAPI Emulator");
+        caps.setCapability("appium:platformVersion", "12.0");
+        caps.setCapability("appium:automationName", "UiAutomator2");
+        MutableCapabilities sauceOptions = new MutableCapabilities();
+        sauceOptions.setCapability("username", "oauth-renato.yancovit3-98362");
+        sauceOptions.setCapability("accessKey", "22cb612a-0f77-4ec2-9304-a49a40c8f6d0");
+        sauceOptions.setCapability("build", "appium-build-DJ39D");
+        sauceOptions.setCapability("name",
+                String.valueOf(System.currentTimeMillis()));
+        sauceOptions.setCapability("deviceOrientation", "PORTRAIT");
+        caps.setCapability("sauce:options", sauceOptions);
+        return caps;
     }
 }

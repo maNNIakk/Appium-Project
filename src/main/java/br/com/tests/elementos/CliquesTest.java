@@ -1,6 +1,7 @@
 package br.com.tests.elementos;
 
 import br.com.core.BaseTest;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,6 +10,11 @@ public class CliquesTest extends BaseTest {
     @BeforeClass
     public static void setupEach(){
         menu.acessarCliques();
+    }
+
+    @AfterClass
+    public static void setup(){
+        driver.navigate().back();
     }
 
     @Test

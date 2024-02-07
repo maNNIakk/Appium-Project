@@ -2,10 +2,16 @@ package br.com.tests.elementos;
 
 import br.com.core.BaseTest;
 import br.com.core.DriverFactory;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class AccordionTest extends BaseTest {
+
+    @AfterClass
+    public static void tearDown(){
+        driver.navigate().back();
+    }
 
     @Test
     public void deveInteragirComAccordion(){
